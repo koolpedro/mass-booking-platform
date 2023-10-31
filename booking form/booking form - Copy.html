@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mass Intention Booking.</title>
+    <style>
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #dd962b;
+            color: white;
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          }
+        p{border-style: double;}
+        .blink {
+            animation: blinker 8.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+            font: bolder ;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+       
+    form {text-align: center; background-color: rgb(233, 193, 133); border-style: double; border-color: black; font-size: x-large; font: bold;}
+    fieldset {border-color: black;}
+    input[type=text], select {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      textarea {
+        width: 50%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        
+      }
+      .button {
+        display: inline-block;
+        border-radius: 15px;
+        background-color: #ebe7e0;
+        border: none;
+        color: #271c0e;
+        text-align: center;
+        font-size: 20px;
+        padding: 8px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    
+    </style>
+</head>
+<body>
+    
+    <div class="header"><h3>Catholic Arch Diocese of Lagos</h3><h2>ST CYPRIAN CATHOLIC CHURCH OKO OBA AGEGE LAGOS</H2></div>
+    <marquee class="blink">Mass Intentions.! Mass Intentions.!! Mass Intentions.!!!</marquee>
+
+
+    <form action="https://form.taxi/s/5tthrpcv" method="POST" accept-charset="UTF-8">
+        <fieldset>
+          <legend>Parishioner Information</legend>
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+          <label for="phoneno">Phone No.</label>
+          <input type="text" id="phoneno" name="phonenumber" placeholder="Your phone number.."><br>
+            
+            <label>
+                Enter Intentions <br>
+                <textarea name="Message" placeholder="Enter your prayer intentions..."></textarea>
+              </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Mass Intention Schedule</legend>
+          <div class="two-cols">
+            <label>
+              Date
+              <input type="date" name="Appointment request" required>
+            </label>
+            <div class="inline">
+              <label>
+                <input type="hidden" name="Morning desired" value="NO">
+                <input type="checkbox" name="Morning desired" value="YES">
+                Morning Mass
+              </label>
+              <label>
+                <input type="hidden" name="Afternoon desired" value="NO">
+                <input type="checkbox" name="Afternoon desired" value="YES">
+                Afternoon Mass
+              </label>
+              <label>
+                <input type="hidden" name="Evening desired" value="NO">
+                <input type="checkbox" name="Evening desired" value="YES">
+                Evening Mass
+              </label>
+            </div>
+          </div><br>
+          
+          <label> Confirmation requested by <br></label>
+          <div class="inline">
+            <label>
+              <input type="radio" name="Confirmation requested by" value="Email" checked>
+              Email
+            </label>
+            <label>
+              <input type="radio" name="Confirmation requested by" value="Phone">
+              Phone call
+            </label>
+        </label>
+        <label>
+          <input type="radio" name="Confirmation requested by" value="Text Message">
+          Text Message
+        </label>
+          </div>
+        </fieldset>
+        
+          
+        <button class="button" style="vertical-align:middle"><span>Submit request </span></button>
+        
+      </form>
+</body>
+</html>
